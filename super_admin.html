@@ -11,40 +11,9 @@
     <button onclick="goBack()">Back</button>
     <div id="requests"></div>
 
+    <script src="script.js"></script>
     <script>
-        function goBack() {
-            window.location.href = 'index.html';
-        }
-
-        function fetchRequests() {
-            const requestsDiv = document.getElementById('requests');
-            // Mock data for demonstration
-            const requests = [
-                { name: 'John Doe', email: 'john@example.com', phone: '1234567890', role: 'pending' }
-            ];
-
-            requests.forEach(request => {
-                const requestDiv = document.createElement('div');
-                requestDiv.innerHTML = `
-                    <p>Name: ${request.name}</p>
-                    <p>Email: ${request.email}</p>
-                    <p>Phone: ${request.phone}</p>
-                    <button onclick="approveRequest('${request.name}')">Approve</button>
-                    <button onclick="rejectRequest('${request.name}')">Reject</button>
-                `;
-                requestsDiv.appendChild(requestDiv);
-            });
-        }
-
-        function approveRequest(name) {
-            alert(`Approved request for ${name}`);
-        }
-
-        function rejectRequest(name) {
-            alert(`Rejected request for ${name}`);
-        }
-
-        window.onload = fetchRequests;
+        document.addEventListener("DOMContentLoaded", fetchRequests);
     </script>
 </body>
 </html>
