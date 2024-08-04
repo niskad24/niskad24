@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#loginForm, #joinForm {
+    margin-top: 20px;
+}
+
+label, input {
+    display: block;
+    margin: 5px 0;
+}
+
+button {
+    margin-top: 10px;
+}
+
+
+
+
+
